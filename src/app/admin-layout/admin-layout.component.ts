@@ -12,34 +12,23 @@ export class AdminLayoutComponent implements OnInit {
   constructor(
     private service: ApiServiceService,
     private router: Router
-    ) { }
+  ) { }
 
   ngOnInit() {
-  
+
   }
 
-  routeToAddProduct(){
-  this.router.navigate(['/layout/addproduct'])
+  routeToAddSweep() {
+    this.router.navigate(['/layout/addsweep'])
   }
 
-  routeToProductList(){
-    this.router.navigate(['layout/productlist'])
+  routeToSweepList() {
+    this.router.navigate(['layout/sweeplist'])
   }
 
-  routeToDashboard(){
-    this.router.navigate(['layout/dashboard'])
-  }
-   date = "2020-12-20"
-
-  getSweeps(){
-    this.service.getSweepsByDate(this.date).subscribe(d=>{
-      console.log("Res",d);
-    })
-  }
-
-  logoutToHome(){
+  logoutToHome() {
     this.router.navigate(['login'])
-  
+
   }
 
 }

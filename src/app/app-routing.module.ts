@@ -13,8 +13,8 @@ const routes: Routes = [
   {path:'layout',component:AdminLayoutComponent,
   children:[
     {path:'dashboard',component:DashboardComponent},
-    {path:'addproduct',component:ProductAddComponent},
-    {path:'productlist',component:ProductListComponent},
+    {path:'addsweep',component:ProductAddComponent},
+    {path:'sweeplist',component:ProductListComponent},
   ]
 },
 ];

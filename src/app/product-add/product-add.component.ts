@@ -9,64 +9,65 @@ declare var $: any;
   templateUrl: './product-add.component.html',
   styleUrls: ['./product-add.component.css']
 })
-export class ProductAddComponent implements OnInit,AfterViewInit {
+export class ProductAddComponent implements OnInit, AfterViewInit {
 
-  constructor(private service : ApiServiceService) { } 
+  constructor(private service: ApiServiceService) { }
 
   obj: product = new product();
-  
+
   ngOnInit() {
-  
+
   }
 
-  
-  
+
+
   ngAfterViewInit() {
     $(document).ready(function () {
       var navListItems = $('div.setup-panel div a'),
-              allWells = $('.setup-content'),
-              allNextBtn = $('.nextBtn');
-    
+        allWells = $('.setup-content'),
+        allNextBtn = $('.nextBtn');
+      //copied
+
       allWells.hide();
-    
+
       navListItems.click(function (e) {
-          e.preventDefault();
-          var $target = $($(this).attr('href')),
-                  $item = $(this);
-    
-          if (!$item.hasClass('disabled')) {
-              navListItems.removeClass('btn-primary').addClass('btn-default');
-              $item.addClass('btn-primary');
-              allWells.hide();
-              $target.show();
-              $target.find('input:eq(0)').focus();
-          }
+        e.preventDefault();
+        var $target = $($(this).attr('href')),
+          $item = $(this);
+
+        if (!$item.hasClass('disabled')) {
+          navListItems.removeClass('btn-primary').addClass('btn-default');
+          $item.addClass('btn-primary');
+          allWells.hide();
+          $target.show();
+          $target.find('input:eq(0)').focus();
+        }
       });
-    
-      allNextBtn.click(function(){
-          var curStep = $(this).closest(".setup-content"),
-              curStepBtn = curStep.attr("id"),
-              nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-              curInputs = curStep.find("input[type='text'],input[type='url']"),
-              isValid = true;
-    
-          $(".form-group").removeClass("has-error");
-          for(var i=0; i<curInputs.length; i++){
-              if (!curInputs[i].validity.valid){
-                  isValid = false;
-                  $(curInputs[i]).closest(".form-group").addClass("has-error");
-              }
+
+      allNextBtn.click(function () {
+        var curStep = $(this).closest(".setup-content"),
+          curStepBtn = curStep.attr("id"),
+          nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+          curInputs = curStep.find("input[type='text'],input[type='url']"),
+          isValid = true;
+
+        $(".form-group").removeClass("has-error");
+        for (var i = 0; i < curInputs.length; i++) {
+          if (!curInputs[i].validity.valid) {
+            isValid = false;
+            $(curInputs[i]).closest(".form-group").addClass("has-error");
           }
-    
-          if (isValid)
-              nextStepWizard.removeAttr('disabled').trigger('click');
+        }
+
+        if (isValid)
+          nextStepWizard.removeAttr('disabled').trigger('click');
       });
-    
+
       $('div.setup-panel div a.btn-primary').trigger('click');
     });
   }
 
-  onChange(value){
+  onChange(value) {
     this.obj.endDate = value;
   }
 
@@ -74,14 +75,34 @@ export class ProductAddComponent implements OnInit,AfterViewInit {
 
 
 
-  save(){
-  console.log(this.obj)
-  this.service.insertSweep(this.obj).subscribe(d=>{
-    console.log(d);
-  })
+  save() {
+    console.log(this.obj)
+
+    let sweepObject = {
+
+      name: this.obj.store,
+      publisherName: this.obj.brand,
+      productName: this.obj.product,
+      startDate: this.obj.startDate,
+      endDate: this.obj.endDate,
+      instantAmount: this.obj.instantAmount,
+      instantLimit: this.obj.instantLimit,
+      dailyAmount: this.obj.dailyAmount,
+      dailyLimit: this.obj.dailyLimit,
+      weeklyAmount: this.obj.weeklyAmount,
+      weeklyLimit: this.obj.weeklyLimit,
+      publicAddress: null,
+      recoveryText: null,
+      status: "New"
+    }
+
+    console.log(sweepObject);
+    this.service.insertSweep(sweepObject).subscribe(d => {
+      
+    })
   }
 
- 
 
-  
+
+
 }

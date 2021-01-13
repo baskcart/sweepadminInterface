@@ -1,17 +1,17 @@
 export class product{
-name: String
-publisherName: String
-productName:String
-startDate: String
+store: String  
+brand: String   
+product:String   
+startDate: String 
 endDate: String
-instantAmount: Number
-instantLimit: Number
-dailyAmount: Number
-dailyLimit: Number
-weeklyAmount: Number
-weeklyLimit:Number
-publicAddress: String
-recoveryText: String
-status : String
+instantAmount : Number = 10;
+instantLimit: Number = 100;
+dailyAmount: Number = 100;
+dailyLimit: Number = 10;
+weeklyAmount: Number = 1000;
+weeklyLimit:Number = 1;
+publicAddress: null
+recoveryText: null
+status : "New"
 
 }

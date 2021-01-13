@@ -158,19 +158,19 @@
                           <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Store</label>
-                                <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Store Name"  />
+                                <input   [(ngModel)]="obj.store"  maxlength="100" type="text" required="required" class="form-control" name="store"  placeholder="Enter Store Name"  />
                               </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Brand</label>
-                                <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Brand Name" />
+                                <input maxlength="100" type="text" required="required" class="form-control" name="brand" [(ngModel)]="obj.brand" placeholder="Enter Brand Name" />
                               </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Product</label>
-                                <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Product Name" />
+                                <input maxlength="100" type="text" required="required" class="form-control" name="product" [(ngModel)]="obj.product" placeholder="Enter Product Name" />
                               </div>
                         </div>
                       </div>
@@ -203,7 +203,7 @@
                       </div>
                       
                       <div style="float: right;">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" checked>
                         <label class="form-check-label" for="flexCheckDefault" > Auto Extend</label>
                       </div>
 
@@ -243,10 +243,10 @@
                                  Instance
                                 </label>
                                 <br>
-                                <input  maxlength="100" type="text" required="required" class="form-control" name ="instancePrice" value="$10" placeholder="Enter Instance Price"  />
+                                <input  maxlength="100" type="text" required="required" class="form-control" [(ngModel)]="obj.instantAmount" name ="instancePrice" value="$10" placeholder="Enter Instance Price"  />
                                 <br>
                                 <br>
-                                <input  maxlength="100" type="text" required="required" class="form-control" name ="instancePrice" value="$100" placeholder="Enter Instance Limit"  />
+                                <input  maxlength="100" type="text" required="required" class="form-control" [(ngModel)]="obj.instantLimit" name ="instanceLimit" value="$100" placeholder="Enter Instance Limit"  />
                               </div>
                        </div>
 
@@ -257,10 +257,10 @@
                                  Daily
                                 </label>
                                 <br>
-                                <input  maxlength="100" type="text" required="required" class="form-control" name ="dailyPrice" value="$100" placeholder="Enter Daily Price"  />
+                                <input  maxlength="100" type="text" required="required" class="form-control" [(ngModel)]="obj.dailyAmount" name ="dailyPrice" value="$100" placeholder="Enter Daily Price"  />
                                 <br>
                                 <br>
-                                <input  maxlength="100" type="text" required="required" class="form-control" name ="dailyLimit" value="$10" placeholder="Enter Daily Limit"  />
+                                <input  maxlength="100" type="text" required="required" class="form-control" [(ngModel)]="obj.dailyLimit" name ="dailyLimit" value="$10" placeholder="Enter Daily Limit"  />
                             </div>
                         </div>
 
@@ -271,10 +271,10 @@
                                   Weekly
                                 </label>
                                 <br>
-                                <input  maxlength="100" type="text" required="required" class="form-control" name ="weeklyPrice" value="$1000" placeholder="Enter Weekly Price"  />
+                                <input  maxlength="100" type="text" required="required" class="form-control" [(ngModel)]="obj.weeklyAmount" name ="weeklyPrice" value="$1000" placeholder="Enter Weekly Price"  />
                                 <br>
                                 <br>
-                                <input  maxlength="100" type="text" required="required" class="form-control" name ="weeklyPrice" value="$1" placeholder="Enter Weekly Limit"  />
+                                <input  maxlength="100" type="text" required="required" class="form-control" [(ngModel)]="obj.weeklyLimit" name ="weeklyLimit" value="$1" placeholder="Enter Weekly Limit"  />
                               </div>
                         </div>
 
@@ -294,7 +294,7 @@
                     <div class="col-md-12">
                       <h3> Step 3</h3>
                       <div style="float: right;">
-                        <button class="btn btn-primary btn-lg pull-right" type="submit">Submit</button>
+                        <button class="btn btn-primary btn-lg pull-right" (click)="save()" type="submit">Submit</button>
     
                       </div>
                     </div>

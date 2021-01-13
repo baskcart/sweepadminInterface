@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://3.129.60.224:8080/'
+  baseUrl: 'https://api.baskcart.com/'
 };
 
 /*

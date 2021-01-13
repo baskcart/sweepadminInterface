@@ -12,9 +12,9 @@ export class ApiServiceService {
 
   constructor(private http : HttpClient) { }
 
-  private insertSweepURL = environment.baseUrl+'sweep/add';
-  private getSweepsURL = environment.baseUrl+'sweep/findByDate/'
-  private getSweepsByDateURL = environment.baseUrl+'sweep/findByDate/';
+  private insertSweepURL = environment.baseUrl+'sweepadmin/sweep/add';
+  private getSweepsURL = environment.baseUrl+'sweepadmin/sweep/findByDate';
+  private getSweepsByDateURL = environment.baseUrl+'sweepadmin/sweep/findByDate';
   private insertWinnerURL = environment.baseUrl+'winner/add';
   private getWinnersDailyURL = environment.baseUrl+'find/by?date=2020-12-20&type=daily';
   private getWinnerWeeklyURL = environment.baseUrl+'find/by?date=2020-12-20&type=weekly';
