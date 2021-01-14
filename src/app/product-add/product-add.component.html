@@ -190,7 +190,7 @@
                           <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Start Date</label>
-                                <input name = "startDate" [(ngModel)]="obj.startDate" (input)="onChange($event.target.value)" type="date" required="required" class="form-control" />
+                                <input name = "startDate" [(ngModel)]="obj.startDate" (change)="selectDate($event.target.value)" type="date" required="required" class="form-control" />
                               </div>
                           </div>
                           <div class="col-md-6">
@@ -219,7 +219,7 @@
                                 <h4>Select Sweep And Prizes And Set Limit</h4>
                             </div>
                             <div class="col-md-6" style="padding-left: 250px;">
-                                <h6>Total Budget:<span>$XXXX.XX</span></h6>
+                                <h6>Total Budget:<span>${{data}}</span></h6>
                             </div>
                         </div>
                          

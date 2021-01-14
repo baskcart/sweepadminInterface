@@ -1,34 +1,25 @@
 <table class="table table-hover table-responsive"  >
     <thead  class="thead-dark">
       <tr>
-        <th scope="col"></th>
-        <th scope="col"></th>
-        <th scope="col"></th>
         <th scope="col">SR#</th>
         <th scope="col">SweepStake</th>
         <th scope="col">Store</th>
         <th scope="col">Product</th>
         <th scope="col">StartDate</th>
         <th scope="col">EndDate</th>
-        <th scope="col">Limit</th>
-        <th scope="col">Price</th>
-        <th scope="col">Token </th>
-        <th scope="col">Wins</th>
-        <th scope="col">Chain</th>
-        <th scope="col">Status</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-        
+        <th scope="col">Instant Limit</th>
+        <th scope="col">Instant Amount</th>
+        <th scope="col">Daily Amount </th>
+        <th scope="col">Daily Limit</th>
+        <th scope="col">Weekly Amount</th>
+        <th scope="col">Weekly Limit</th>
+        <!-- <th scope="col">Public Address</th>
+        <th scope="col">Recovery Text</th>  -->
+        <th scope="col">Status</th> 
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let d of data; let i=index" >
-       <td></td> 
-       <td></td> 
-       <td></td>
        <td>{{i+1}}</td>  
        <td>{{d.name}}</td>
        <td>{{d.publisherName}}</td>
@@ -37,14 +28,13 @@
        <td>{{d.endDate}}</td>
        <td>{{d.instantLimit}}</td>
        <td>{{d.instantAmount}}</td>
-       <td>no field</td>
-       <td>no field</td>
-       <td>no field</td>
+       <td>{{d.dailyAmount}}</td>
+       <td>{{d.dailyLimit}}</td>
+       <td>{{d.weeklyAmount}}</td>
+       <td>{{d.weeklyLimit}}</td>
+       <!-- <td>{{d.publicAddress}}</td>
+       <td>{{d.recoveryText}}</td> -->
        <td>{{d.status}}</td>
-       <td></td>
-       <td></td>
-       <td></td>
-       <td></td>
       </tr>
     </tbody>
     <br>

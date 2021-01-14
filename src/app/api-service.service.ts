@@ -20,7 +20,7 @@ export class ApiServiceService {
   private getWinnerWeeklyURL = environment.baseUrl+'find/by?date=2020-12-20&type=weekly';
 
   public insertSweep(object:any):Observable<any>{
-    return this.http.post(this.insertSweepURL,object);
+    return this.http.post(this.insertSweepURL,object, {responseType:'text'});
   }
 
   public getSweeps():Observable<any>{

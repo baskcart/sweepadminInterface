@@ -14,8 +14,14 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
   constructor(private service: ApiServiceService) { }
 
   obj: product = new product();
+  date = new Date();
+  data ;
+
+
 
   ngOnInit() {
+
+    this.totalBudget();
 
   }
 
@@ -67,12 +73,18 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
     });
   }
 
-  onChange(value) {
-    this.obj.endDate = value;
+  lastDay;
+  selectDate(value) {
+    let startDate = new Date(value)
+    this.obj.endDate = null
+    this.lastDay = startDate.getFullYear() + "-" + this.checkZeroAppend((startDate.getMonth()+1).toString()) + "-" + this.checkZeroAppend((startDate.getDate()+7).toString());
+    this.obj.endDate = this.lastDay
   }
 
+  checkZeroAppend(value: String){
+    return value.length == 1 ? "0"+value : value;
 
-
+  }
 
 
   save() {
@@ -102,6 +114,17 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
     })
   }
 
+
+  totalBudget(){
+    this.service.getSweeps().subscribe(d=>{
+        this.data = d[0].instantAmount+d[0].dailyAmount+d[0].weeklyAmount;
+        console.log(this.data);
+        
+      })
+  
+    
+
+  }
 
 
 
