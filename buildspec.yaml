@@ -18,10 +18,10 @@ phases:
       - ng build --prod
   post_build:
     commands:
-      - mv appspec.yml ./dist/arduino-project
-      - mv scripts ./dist/arduino-project
+      - mv appspec.yml ./dist/ArduinoProject
+      - mv scripts ./dist/ArduinoProject
 artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: dist/arduino-project
+  base-directory: dist/ArduinoProject
