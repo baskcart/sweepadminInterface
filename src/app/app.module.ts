@@ -10,6 +10,7 @@ import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { SigninComponent } from './signin/signin.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
     LoginComponent,
     ProductAddComponent,
     ProductListComponent,
-    DashboardComponent
+    DashboardComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,30 @@
+.bg-image {
+  background-image: url('../../assets/images/auth/lockscreen-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.linked-in-button-container {
+  background-color: rgba(38, 41, 46, 0.9);
+  color: white;
+  padding: 1rem;
+  font-family: sans-serif;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 10% 0 10%;
+  transition: all 0.5s;
+}
+
+.linked-in-button-container:hover {
+    background-color: rgba(38, 41, 46, 1);
+  }
+.linked-in-button-container p {
+  display: inline-block;
+  vertical-align: text-top;
+  font-size: 1.2rem;
+  padding-right: 0.2em;
+}
+.login-container {
+  margin-top: 40%;
+}
