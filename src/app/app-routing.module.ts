@@ -6,12 +6,14 @@ import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SigninComponent } from './signin/signin.component';
+import { CallbackComponent } from './callback/callback.component';
 
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'signin',component:SigninComponent},
   {path:'login',component:LoginComponent},
+  {path: 'callback', component: CallbackComponent},
   {path:'layout',component:AdminLayoutComponent,
   children:[
     {path:'dashboard',component:DashboardComponent},

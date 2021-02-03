@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://api.baskcart.com/'
+  baseUrl: 'https://api.baskcart.com/',
+  LOGIN_REDIRECT_URI: 'http://localhost:4200/callback',
+  LOGOUT_REDIRECT_URI: 'http://localhost:4200/'
 };
 
 /*

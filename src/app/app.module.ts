@@ -11,6 +11,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { SigninComponent } from './signin/signin.component';
+import { CallbackComponent } from './callback/callback.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SigninComponent } from './signin/signin.component';
     ProductAddComponent,
     ProductListComponent,
     DashboardComponent,
-    SigninComponent
+    SigninComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,

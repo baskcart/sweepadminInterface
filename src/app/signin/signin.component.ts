@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { OktaAuthService} from '../okta-auth.service'
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
-  constructor() { }
+  constructor(public oktaAuth: OktaAuthService) { }
 
   ngOnInit() {
   }
