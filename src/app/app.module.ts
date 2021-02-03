@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { SigninComponent } from './signin/signin.component';
 import { CallbackComponent } from './callback/callback.component';
+import { AuthInterceptor } from './okta-auth.service';
 
 
 @NgModule({
@@ -32,7 +33,13 @@ import { CallbackComponent } from './callback/callback.component';
     HttpClientModule,
     NzDatePickerModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
