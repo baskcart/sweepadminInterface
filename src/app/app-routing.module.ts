@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SigninComponent } from './signin/signin.component';
 import { CallbackComponent } from './callback/callback.component';
+import { OktaAuthGuard } from './app.guard';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path: 'callback', component: CallbackComponent},
   {path:'layout',component:AdminLayoutComponent,
+  canActivate: [OktaAuthGuard],
   children:[
     {path:'dashboard',component:DashboardComponent},
     {path:'addsweep',component:ProductAddComponent},
