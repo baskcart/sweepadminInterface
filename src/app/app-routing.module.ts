@@ -11,7 +11,7 @@ import { OktaAuthGuard } from './app.guard';
 
 
 const routes: Routes = [
-  {path:'',component:LoginComponent},
+  {path:'',component:SigninComponent},
   {path:'signin',component:SigninComponent},
   {path:'login',component:LoginComponent},
   {path: 'callback', component: CallbackComponent},
