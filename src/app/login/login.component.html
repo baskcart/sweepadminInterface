@@ -13,6 +13,9 @@
             <button class="login100-form-btn" (click)="loginUser()">
               Login
             </button>
+            <button style="margin-left: 44px;" class="login100-form-btn" (click)="loginWithLinkedIn()">
+              Login With LinkedIn
+            </button>
           </div>
           <div class="form-group">
             <a  (click)="goToRegister()" class="link">Register?</a>
@@ -62,3 +65,9 @@
       </div>
     </body>
 
+    <lottie-animation-view
+    [options]="lottieConfig"
+    [width]="300"
+    [height]="600"
+    (animCreated)="handleAnimation($event)">
+</lottie-animation-view>
