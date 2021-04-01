@@ -21,6 +21,7 @@
     "@angular/router": "~8.2.14",
     "jquery": "^3.6.0",
     "ng-lottie": "^0.3.2",
+    "@okta/okta-auth-js": "^4.6.1",
     "ng-zorro-antd": "^8.5.2",
     "rxjs": "~6.4.0",
     "save": "^2.4.0",

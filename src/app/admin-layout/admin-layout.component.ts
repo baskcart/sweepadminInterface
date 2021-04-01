@@ -1,6 +1,7 @@
 import { ApiServiceService } from './../api-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { OktaAuthService } from '../okta-auth.service';
 
 @Component({
   selector: 'app-admin-layout',
@@ -8,10 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-layout.component.css']
 })
 export class AdminLayoutComponent implements OnInit {
-
   constructor(
     private service: ApiServiceService,
-    private router: Router
+    private router: Router,
+    private oktaAuth: OktaAuthService
   ) { }
 
   ngOnInit() {
@@ -27,7 +28,7 @@ export class AdminLayoutComponent implements OnInit {
   }
 
   logoutToHome() {
-    this.router.navigate(['login'])
+    this.oktaAuth.logout();
 
   }
 

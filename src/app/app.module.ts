@@ -14,6 +14,10 @@ import { LinkedResponseCheckComponent } from './linked-response-check/linked-res
 import { LottieAnimationViewModule } from 'ng-lottie';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './home-page/home-page.component';
+import { SigninComponent } from './signin/signin.component';
+import { CallbackComponent } from './callback/callback.component';
+import { AuthInterceptor } from './okta-auth.service';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ import { HomePageComponent } from './home-page/home-page.component';
     ProductListComponent,
     DashboardComponent,
     LinkedResponseCheckComponent,
-    HomePageComponent
+    HomePageComponent,
+    SigninComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -32,11 +38,17 @@ import { HomePageComponent } from './home-page/home-page.component';
     FormsModule,
     HttpClientModule,
     NzDatePickerModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
     LottieAnimationViewModule.forRoot()
-    
+
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
