@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OktaAuthService} from '../okta-auth.service'
 
 @Component({
   selector: 'app-home-page',
@@ -9,7 +10,9 @@ export class HomePageComponent implements OnInit {
   public lottieConfig: Object;
   private anim: any;
   private animationSpeed: number = 1;
-  constructor() { }
+  
+  constructor(public oktaAuth: OktaAuthService) { }
+
 
   ngOnInit() {
     
