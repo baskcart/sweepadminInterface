@@ -1,9 +1,9 @@
 export class product{
-store: String  
-brand: String   
-product:String   
-startDate: String 
-endDate: String
+store: any
+brand: any
+product:any
+startDate: String =null
+endDate: String=null
 instantAmount : Number = 10;
 instantLimit: Number = 100;
 dailyAmount: Number = 100;

@@ -1,137 +1,9 @@
-<!-- <div class="container">
-    <div class="card" style="padding: 20px; background-color: rgba(255, 255, 255,1); border-radius: 6px;">
-        <div class="card-header" style="font-weight: 900; font-variant: small-caps; color: grey;">
-            Add Product
-        </div>
-        <div class="card-body">
-            <form>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>Name</b></label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name"
-                                name="name" [(ngModel)]="obj.name">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>Publisher Name</b></label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Publisher Name" name="publisherName" [(ngModel)]="obj.publisherName">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>Product Name</b></label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Product Name" name="productName" [(ngModel)]="obj.productName">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>Public Address</b></label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Public Address" name="publicAddress" [(ngModel)]="obj.publicAddress">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>Start Date</b></label>
-                            <input type="date" class="form-control" id="exampleFormControlInput1"
-                                placeholder="name@example.com" name="startDate" [(ngModel)]="obj.startDate">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>End Date</b></label>
-                            <input type="date" class="form-control" id="exampleFormControlInput1"
-                                placeholder="name@example.com" name="endDate" [(ngModel)]="obj.endDate">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>Instant Amount</b></label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Instant Amount" name="instantAmount" [(ngModel)]="obj.instantAmount">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>Instant Limit</b></label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Instant Limit" name="instantLimit" [(ngModel)]="obj.instantLimit">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>Daily Amount</b></label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Daily Amount" name="dailyAmount" [(ngModel)]="obj.dailyAmount">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>Daily Limit</b></label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Daily Limit" name="dailyLimit" [(ngModel)]="obj.dailyLimit">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>Weekly Amount</b></label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Weekly Amount" name="weeklyAmount" [(ngModel)]="obj.weeklyAmount">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>Weekly Limit</b></label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Weekly Limit" name="weeklyLimit" [(ngModel)]="obj.weeklyLimit">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1"><b>Recovery Text</b></label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Recovery Text" name="recoveryText" [(ngModel)]="obj.recoveryText">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">
-                                <label style="color: black;"><b>Is Active</b></label>
-                                <input type="checkbox" name="status" [(ngModel)]="obj.status" value="1"
-                                    aria-label="Is Active">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="float: right;">
-                    <button type="button" (click)="save()" class="btn btn-primary">Save</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div> -->
 
 <div class = "card">
     <div class = "card-header">Create Sweep</div>
     <div class="card-body">
         <div class="container">
-  
+
             <div class="stepwizard col-lg-12" style="width: 100%;">
                 <div class="stepwizard-row setup-panel">
                   <div class="stepwizard-step">
@@ -140,20 +12,22 @@
                   </div>
                   <div class="stepwizard-step">
                     <a href="#step-2" type="button" class="btn btn-default" disabled="disabled">2</a>
+                    <!-- <a *ngIf="(!obj.store||!obj.brand||!obj.product)"  href="#" (click)="showError()" type="button" class="btn btn-default" disabled="disabled">02</a> -->
                     <p>Step 2</p>
                   </div>
-                  <div class="stepwizard-step">
+                  <!-- <div class="stepwizard-step">
                     <a href="#step-3" type="button" class="btn btn-default" disabled="disabled">3</a>
                     <p>Step 3</p>
-                  </div>
+                  </div> -->
                   <div class="stepwizard-step">
-                    <a href="#step-4" type="button" class="btn btn-default" disabled="disabled">4</a>
-                    <p>Step 4</p>
+                    <a href="#step-4" type="button" class="btn btn-default" disabled="disabled">3</a>
+                    <p>Step 3</p>
                   </div>
                 </div>
               </div>
-              
+
               <form role="form" action="" method="post">
+                <form #f="ngForm"  action="">
                 <div class="row setup-content" id="step-1">
                   <div class="col-md-12">
                     <div class="col-md-12">
@@ -162,30 +36,161 @@
                           <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Store</label>
-                                <input   [(ngModel)]="obj.store"  maxlength="100" type="text" required="required" class="form-control" name="store"  placeholder="Enter Store Name"  />
+                                <ng-autocomplete
+                                required
+                                [ngStyle]="{'border':((store1.invalid && (store1.dirty || store1.touched))||(store1.invalid&&f.submitted))?'1px solid red':'1px solid #ced4da' }"
+                                #store1 = "ngModel"
+                                style="display: block;
+                                width: 100%;
+
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.5;
+                                color: #212529;
+
+                                background-clip: padding-box;
+                                border: 1px solid #ced4da;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                border-radius: .25rem;
+                                transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;;"
+                                [data]="shops"
+                                [searchKeyword]="keyword"
+                                (selected)='selectEvent($event)'
+                                (inputChanged)='onStoreChangeSearch($event)'
+                                (inputFocused)='onFocused($event)'
+                                [(ngModel)]="obj.store"
+                                [ngClass]="{'is-invalid':(store1.invalid && (store1.dirty || store1.touched))}"
+                                placeholder="Stores"
+                                required
+                                name="store"
+                                [itemTemplate]="itemTemplate"
+                                [notFoundTemplate]="notFoundTemplate">
+                              </ng-autocomplete>
+
+                              <ng-template #itemTemplate let-item>
+                              <a [innerHTML]="item.name"></a>
+                              </ng-template>
+
+                              <ng-template #notFoundTemplate let-notFound>
+                              <div [innerHTML]="notFound"></div>
+                              </ng-template>
+                              <div *ngIf="(store1.invalid&&(store1.dirty || store1.touched)&&store1.errors.required)||(store1.invalid&&f.submitted)" class="invalid-feedback">
+                                <div *ngIf="store1.errors.required">Store  is required</div>
+                            </div>
                               </div>
                           </div>
                           <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Brand</label>
-                                <input maxlength="100" type="text" required="required" class="form-control" name="brand" [(ngModel)]="obj.brand" placeholder="Enter Brand Name" />
+                                <ng-autocomplete
+                                [ngStyle]="{'border':((brand1.invalid && (brand1.dirty || brand1.touched))||(brand1.invalid&&f.submitted))?'1px solid red':'1px solid #ced4da' }"
+                                #brand1 ="ngModel"
+                                required
+                               style="display: block;
+                                width: 100%;
+
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.5;
+                                color: #212529;
+
+                                background-clip: padding-box;
+                                border: 1px solid #ced4da;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                border-radius: .25rem;
+                                transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;;"
+                                [data]="brands"
+                                [searchKeyword]="keyword"
+                                (selected)='selectEvent($event)'
+                                (inputChanged)='onBrandChangeSearch($event)'
+                                (inputFocused)='onFocused($event)'
+                                [(ngModel)]="obj.brand"
+                                placeholder="Brands"
+                                name="brand1"
+                                [itemTemplate]="itemTemplate"
+                                [ngClass]="{'is-invalid':((brand1.invalid && (brand1.dirty || brand1.touched))||(brand1.invalid&&f.submitted))}"
+                                [notFoundTemplate]="notFoundTemplate">
+                              </ng-autocomplete>
+
+
+                              <ng-template #itemTemplate let-item>
+                              <a [innerHTML]="item.name"></a>
+                              </ng-template>
+
+                              <ng-template #notFoundTemplate let-notFound>
+                              <div [innerHTML]="notFound"></div>
+                              </ng-template>
+                              <div *ngIf="((brand1.invalid && (brand1.dirty || brand1.touched))||(brand1.invalid&&f.submitted))" class="invalid-feedback">
+                                <div *ngIf="brand1.errors.required">Brand  is required</div>
+                            </div>
                               </div>
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Product</label>
-                                <input maxlength="100" type="text" required="required" class="form-control" name="product" [(ngModel)]="obj.product" placeholder="Enter Product Name" />
+                                <ng-autocomplete class="ng-autocomplete"
+                                [ngStyle]="{'border':((products1.invalid && (products1.dirty || products1.touched))||(products1.invalid&&f.submitted))?'1px solid red':'1px solid #ced4da' }"
+                                style=" display: block;
+                                width: 100%;
+
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.5;
+                                color: #212529;
+                                border: 1px red;
+
+                                background-clip: padding-box;
+                                border: 1px solid #ced4da;
+                                -webkit-appearance: none;
+                                -moz-appearance: none;
+                                appearance: none;
+                                border-radius: .25rem;
+                                transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;;"
+                                [data]="products"
+                                [searchKeyword]="keyword"
+                                required
+                                (selected)='selectEvent($event)'
+                                (inputChanged)='onProductChangeSearch($event)'
+                                (inputFocused)='onFocused($event)'
+                                [(ngModel)]="obj.product"
+                                placeholder="Products"
+                                [itemTemplate]="itemTemplate"
+                                name="prod"
+                                #products1 = "ngModel"
+                                [ngClass]="{'is-invalid':((products1.invalid && (products1.dirty || products1.touched))||(products1.invalid&&f.submitted))}"
+                                [notFoundTemplate]="notFoundTemplate">
+                              </ng-autocomplete>
+
+                              <ng-template #itemTemplate let-item>
+                              <a [innerHTML]="item.name"></a>
+                              </ng-template>
+
+                              <ng-template #notFoundTemplate let-notFound>
+                              <div [innerHTML]="notFound"></div>
+                              </ng-template>
+                              <div *ngIf="((products1.invalid && (products1.dirty || products1.touched))||(products1.invalid&&f.submitted))" class="invalid-feedback">
+                                <div *ngIf="products1.errors.required">products  is required</div>
+                            </div>
                               </div>
+                              <div class="ng-autocomplete">
+
+                                </div>
                         </div>
                       </div>
                       <div style="float: right;">
-                        <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Continue</button>
+                        <button [hidden]="!(obj.store&&obj.brand&&obj.product)" class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Continue</button>
+                        <button class="btn btn-primary" [hidden]="!(!obj.store||!obj.brand||!obj.product)" (click)="showError()" >Continue</button>
 
                       </div>
                     </div>
                   </div>
                 </div>
-
+              </form>
+              <form #sf="ngForm">
                 <div class="row setup-content" id="step-2">
                   <div class="col-md-12">
                     <div class="col-md-12">
@@ -194,18 +199,25 @@
                           <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Start Date</label>
-                                <input name = "startDate" [(ngModel)]="obj.startDate" (change)="selectDate($event.target.value)" type="date" required="required" class="form-control" />
+                                <input [ngClass]="{'is-invalid':((startDate.invalid && (startDate.dirty || startDate.touched))||(sf.submitted&&startDate.invalid))}" name = "startDate" #startDate="ngModel" [(ngModel)]="obj.startDate" required (change)="selectDate($event.target.value)" type="date" class="form-control" />
+
+                                <div *ngIf="((startDate.invalid && (startDate.dirty || startDate.touched))||(sf.submitted&&startDate.invalid))" class="invalid-feedback">
+                                  <div *ngIf="startDate.errors.required">Start Date is required</div>
+                              </div>
                               </div>
                           </div>
                           <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">End Date</label>
 
-                                <input name= "endDate" [(ngModel)]="obj.endDate"  type="date" required="required" class="form-control"  />
+                                <input name= "endDate"  [ngClass]="{'is-invalid':((endDate.invalid && (endDate.dirty || endDate.touched))||(sf.submitted&&endDate.invalid))}"  #endDate="ngModel" type="date" required class="form-control" (change)="selectDate($event.target.value)" [(ngModel)]="obj.endDate"/>
+                                <div *ngIf="((endDate.invalid && (endDate.dirty || endDate.touched))||(sf.submitted&&endDate.invalid))" class="invalid-feedback">
+                                  <div *ngIf="endDate.errors.required">End Date is required</div>
+                              </div>
                               </div>
                         </div>
                       </div>
-                      
+
                       <div style="float: right;">
                         <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault" checked>
                         <label class="form-check-label" for="flexCheckDefault" > Auto Extend</label>
@@ -216,7 +228,7 @@
                       <br>
                       <hr>
                       <br>
-                      
+
                       <div class="container" style="width: 90%;">
                         <div class="row">
                             <div class="col-md-6">
@@ -226,16 +238,16 @@
                                 <h6>Total Budget:<span>${{data}}</span></h6>
                             </div>
                         </div>
-                         
+
                           <br>
-                          
+
                         <div class="row">
                             <div class="col-md-3">
                                 <br>
                                 <br>
                                 <br>
                                 <br>
-                              
+
                                 <p>Price</p>
                                 <br>
                                 <p>Limit</p>
@@ -284,34 +296,37 @@
 
                       </div>
                     </div>
-                     
-                      
+
+
                       <div style="float: right; margin-top: 20px;">
-                        <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Continue</button>
+                        <button  [hidden]="!(obj.startDate&&obj.endDate)" class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Continue</button>
+                        <button [hidden]="!(!obj.startDate&&!obj.endDate)" class="btn btn-primary " (click)="showError()" type="submit" >Continue</button>
                       </div>
-                      
+
                     </div>
                   </div>
                 </div>
-                <div class="row setup-content" id="step-3">
+              </form>
+                <!-- <div class="row setup-content" id="step-3">
                   <div class="col-xs-6 col-md-offset-3">
                     <div class="col-md-12">
                       <h3> Step 3</h3>
                       <div style="float: right;">
                         <button class="btn btn-primary btn-lg pull-right" (click)="save()" type="submit">Submit</button>
-    
+
                       </div>
                     </div>
                   </div>
-                  
-                </div>
+
+                </div> -->
+
 
                 <div class="row setup-content" id="step-4">
                   <div class="col-xs-6 col-lg-12 col-md-offset-3">
                     <div class="col-md-12">
                       <h3> Step 4</h3>
                       <div class="row">
-                        
+
                         <div class="col-1">
                           <img style="height: 100px;" src="../../assets/images/barcode.png" alt="">
                         </div>
@@ -324,9 +339,9 @@
                             <input  maxlength="100" type="text" required="required" class="form-control mt-4"  name ="" value="" placeholder="Enter anything here"  />
 
                           </div>
-                        
+
                         </div>
-                        
+
 
                         <div class="col-2">
                           <button style="height: 45px; background-color: white; border: none;    margin-top: 53px;
@@ -351,13 +366,13 @@
                       </div>
                     </div>
                   </div>
-                  
+
                 </div>
 
 
-                
+
               </form>
-              
+
             </div>
     </div>
 </div>

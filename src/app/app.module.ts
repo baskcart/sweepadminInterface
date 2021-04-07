@@ -17,7 +17,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { SigninComponent } from './signin/signin.component';
 import { CallbackComponent } from './callback/callback.component';
 import { AuthInterceptor } from './okta-auth.service';
-
+import { ToastrModule } from 'ngx-toastr';
+import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,9 @@ import { AuthInterceptor } from './okta-auth.service';
     HttpClientModule,
     NzDatePickerModule,
     BrowserAnimationsModule,
-    LottieAnimationViewModule.forRoot()
+    LottieAnimationViewModule.forRoot(),
+    ToastrModule.forRoot(),
+    AutocompleteLibModule
 
   ],
   providers: [

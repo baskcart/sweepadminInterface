@@ -19,7 +19,7 @@ export class ApiServiceService {
   private getWinnersDailyURL = environment.baseUrl + 'find/by?date=2020-12-20&type=daily';
   private getWinnerWeeklyURL = environment.baseUrl + 'find/by?date=2020-12-20&type=weekly';
   private getBrandAutoCompleteURL = environment.baseUrl + "sweepproduct/stag/searchBrandByShopAndBrandPrefix";
-  private getProductAutoCompleteURL = environment.baseUrl + "sweepproduct/stag/searchProductByShopAndBrandPrefix";
+  private getProductAutoCompleteURL = environment.baseUrl + "sweepproduct/stag/searchProductByShopAndBrandAndProductPrefix";
   private getShopAutoCompleteURL = environment.baseUrl+"sweepproduct/stag/searchShopByShopPrefix";
 
   public insertSweep(object: any): Observable<any> {
@@ -46,15 +46,28 @@ export class ApiServiceService {
     return this.http.get(this.getWinnerWeeklyURL);
   }
 
-  public getBrandAutoComplete(): Observable<any> {
-    return this.http.get(this.getBrandAutoCompleteURL);
+  public getBrandAutoComplete(query,store): Observable<any> {
+    return this.http.get(this.getBrandAutoCompleteURL,{
+      params:{
+        brandPrefix: query,
+        shopPrefix:store
+      }
+    });
   }
 
-  public getProductAutoComplete(): Observable<any> {
-    return this.http.get(this.getProductAutoCompleteURL);
+  public getProductAutoComplete(query,brand,store): Observable<any> {
+    return this.http.get(this.getProductAutoCompleteURL,{
+      params:{
+        productPrefix:query,
+        brandPrefix:brand,
+        shopPrefix:store
+      }
+    });
   }
 
-  public getShopAutoComplete():Observable<any>{
-    return this.http.get(this.getShopAutoCompleteURL)
+  public getShopAutoComplete(query):Observable<any>{
+    return this.http.get(this.getShopAutoCompleteURL,{params:{
+      shopPrefix:query
+    }})
   }
 }
