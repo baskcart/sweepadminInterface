@@ -327,23 +327,23 @@
                       <h3> Step 4</h3>
                       <div class="row">
 
-                        <div class="col-1">
-                          <img style="height: 100px;" src="../../assets/images/barcode.png" alt="">
+                        <div class="col-3 mt-4">
+                          <img style="height: 100px; float:right" src="../../assets/images/barcode.png" alt="">
                         </div>
 
-                        <div class="col-8 ml-3">
+                        <div class="col-8 ">
                           <div class="row">
                             <p class="ml-4" style="color: black; font-weight: 500; font-size: medium;">Fund your Sweep Account</p>
                           </div>
                           <div class="row">
-                            <input  maxlength="100" type="text" required="required" class="form-control mt-4"  name ="" value="" placeholder="Enter anything here"  />
+                            <input [(ngModel)]="fund"  maxlength="100" type="text" required="required" class="form-control mt-4"  name ="fund" value="" placeholder="Enter anything here"  />
 
                           </div>
 
                         </div>
 
 
-                        <div class="col-2">
+                        <div class="col-1">
                           <button style="height: 45px; background-color: white; border: none;    margin-top: 53px;
                           margin-left: 10px;" class=""><i style="font-size:39px ;" class="fa fa-copy"></i></button>
                         </div>
@@ -357,10 +357,10 @@
                       <div class="row mt-4">
                         <div class="col-3"></div>
                         <div class="col-3">
-                          <button class="btn btn-primary">Check Funding</button>
+                          <button class="btn btn-primary" (click)="checkCounter()">Check Funding</button>
                         </div>
                         <div class="col-3">
-                          <button style="height: 39.6p;width:149px;" class="btn btn-primary">Continue</button>
+                          <button style="height: 39.6p;width:149px;" class="btn btn-primary" [disabled]="counter<2">Continue</button>
                         </div>
                         <div class="col-3"></div>
                       </div>

@@ -18,7 +18,7 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
   obj: product = new product();
   date = new Date();
   data;
-
+  counter=0
   brands = [];
   shops=[];
   products=[];
@@ -249,5 +249,11 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
 
   onFocused(e) {
     // do something when input is focused
+  }
+  fund
+
+  checkCounter(){
+    this.counter++;
+    this.service.checkFund(this.fund).subscribe();
   }
 }
