@@ -156,9 +156,9 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
     console.log(this.obj);
 
     let sweepObject = {
-      name: this.obj.store,
-      publisherName: this.obj.brand,
-      productName: this.obj.product,
+      name: this.obj.store.name,
+      publisherName: this.obj.brand.name,
+      productName: this.obj.product.name,
       startDate: this.obj.startDate,
       endDate: this.obj.endDate,
       instantAmount: this.obj.instantAmount,
@@ -167,13 +167,15 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
       dailyLimit: this.obj.dailyLimit,
       weeklyAmount: this.obj.weeklyAmount,
       weeklyLimit: this.obj.weeklyLimit,
-      publicAddress: null,
-      recoveryText: null,
+      publicAddress: "null",
+      recoveryText: "null",
       status: "New",
     };
 
     console.log(sweepObject);
-    this.service.insertSweep(sweepObject).subscribe((d) => {});
+    this.service.insertSweep(sweepObject).subscribe((d) => {
+      this.toastr.success("Sweep added sucessfully");
+    });
   }
 
   totalBudget() {
