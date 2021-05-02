@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+// import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { LinkedResponseCheckComponent } from './linked-response-check/linked-response-check.component';
 import { LottieAnimationViewModule } from 'ng-lottie';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -38,7 +38,7 @@ import {AutocompleteLibModule} from 'angular-ng-autocomplete';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NzDatePickerModule,
+    // NzDatePickerModule,
     BrowserAnimationsModule,
     LottieAnimationViewModule.forRoot(),
     ToastrModule.forRoot(),
@@ -46,11 +46,7 @@ import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true
-    }
+
   ],
   bootstrap: [AppComponent]
 })
