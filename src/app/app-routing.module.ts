@@ -1,3 +1,6 @@
+import { AddShopComponent } from './add-shop/add-shop.component';
+import { AddBrandComponent } from './add-brand/add-brand.component';
+import { AddProductComponent } from './add-product/add-product.component';
 import { OktaAuthGuard } from './app.guard';
 import { CallbackComponent } from './callback/callback.component';
 import { SigninComponent } from './signin/signin.component';
@@ -28,6 +31,10 @@ const routes: Routes = [
     {path:'dashboard',component:DashboardComponent},
     {path:'addsweep',component:ProductAddComponent},
     {path:'sweeplist',component:ProductListComponent},
+    {path:'add-product',component:AddProductComponent},
+    {path:'add-shop',component:AddShopComponent},
+    {path:'add-brand',component:AddBrandComponent}
+
 
   ]
 },

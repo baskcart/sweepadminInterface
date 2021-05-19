@@ -4,14 +4,14 @@
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="navbar-brand-wrapper d-flex justify-content-center">
-          <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">  
+          <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
             <a class="navbar-brand brand-logo" href="index.html">Sweep</a>
             <a class="navbar-brand brand-logo-mini" href="index.html">Sweep</a>
             <!-- <img src="assets/images/logo-mini.svg" alt="logo"/> -->
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-              <span class="mdi mdi-sort-variant"></span> 
+              <span class="mdi mdi-sort-variant"></span>
             </button>
-          </div>  
+          </div>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
           <!-- <ul class="navbar-nav mr-lg-4 w-100">
@@ -172,6 +172,27 @@
                 </ul>
               </div>
             </li>
+
+            <!-- <li class="nav-item">
+              <a  class="nav-link" [routerLink]="['/layout/add-product']" >
+                <i  class="mdi mdi-plus menu-icon"></i>
+                <span class="menu-title">Add Product</span>
+              </a>
+            </li> -->
+
+            <li class="nav-item">
+              <a class="nav-link"  [routerLink]="['/layout/add-shop']"   >
+                <i class="mdi mdi-plus menu-icon"></i>
+                <span class="menu-title">Add Shop</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link"   [routerLink]="['/layout/add-brand']">
+                <i class="mdi mdi-plus menu-icon"></i>
+                <span class="menu-title">Add Brand</span>
+              </a>
+            </li>
             <!-- <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="ui-basic">
                 <i class="mdi mdi-circle-outline menu-icon"></i>
@@ -236,7 +257,7 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-            
+
             <!-- <div class="row">
               <div class="col-md-12 grid-margin">
                 <div class="d-flex justify-content-between flex-wrap">
@@ -285,7 +306,7 @@
                 <router-outlet></router-outlet>
             </div>
 
-            
+
 
             <!-- <div class="row">
               <div class="col-md-12 stretch-card">
@@ -313,7 +334,7 @@
                               <td>06 Jan 2018</td>
                               <td>$2274253</td>
                           </tr>
-                         
+
                         </tbody>
                       </table>
                     </div>
@@ -336,6 +357,5 @@
       </div>
       <!-- page-body-wrapper ends -->
     </div>
-  
-  
-  
+
+

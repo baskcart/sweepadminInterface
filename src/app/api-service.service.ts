@@ -22,6 +22,8 @@ export class ApiServiceService {
   private getProductAutoCompleteURL = environment.baseUrl + "sweepproduct/stag/searchProductByShopAndBrandAndProductPrefix";
   private getShopAutoCompleteURL = environment.baseUrl+"sweepproduct/stag/searchShopByShopPrefix";
   private checkFundURL = environment.baseUrl+'stellar/balance';
+  private addBrandURL = environment.baseUrl+'sweepproduct/brand/add';
+  private addShopURL = environment.baseUrl+"sweepproduct/shops";
 
   public insertSweep(object: any): Observable<any> {
     return this.http.post(this.insertSweepURL, object, { responseType: 'text' });
@@ -75,4 +77,12 @@ export class ApiServiceService {
   public checkFund(string):Observable<any>{
     return this.http.post(this.checkFundURL,string);
   }
+
+  public addShop(obj):Observable<any>{
+    return this.http.post(this.addShopURL,obj);
+    }
+
+    public addBrand(obj):Observable<any>{
+      return this.http.post(this.addBrandURL,obj);
+      }
 }
