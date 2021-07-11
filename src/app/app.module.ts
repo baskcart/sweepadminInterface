@@ -22,6 +22,8 @@ import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 import { AddProductComponent } from './add-product/add-product.component';
 import { AddShopComponent } from './add-shop/add-shop.component';
 import { AddBrandComponent } from './add-brand/add-brand.component';
+import { ViewBrandComponent } from './components/view-brand/view-brand.component';
+import { ViewShopComponent } from './components/view-shop/view-shop.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { AddBrandComponent } from './add-brand/add-brand.component';
     CallbackComponent,
     AddProductComponent,
     AddShopComponent,
-    AddBrandComponent
+    AddBrandComponent,
+    ViewBrandComponent,
+    ViewShopComponent
   ],
   imports: [
     BrowserModule,

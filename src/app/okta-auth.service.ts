@@ -75,7 +75,7 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private oktaAuthService: OktaAuthService) {
     console.log("interceptor construction")
   }
-
+  debugger
   intercept(req: HttpRequest<any>,
     next: HttpHandler): Observable<HttpEvent<any>> {
     console.log("intercepted");

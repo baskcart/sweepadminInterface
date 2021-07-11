@@ -154,7 +154,8 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
 
   save() {
     console.log(this.obj);
-
+    const oktaStorage = JSON.parse( localStorage.getItem('okta-token-storage'));
+    const currentUserEmail = oktaStorage.idToken.claims.email;
     let sweepObject = {
       name: this.obj.store.name,
       publisherName: this.obj.brand.name,
@@ -170,6 +171,7 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
       publicAddress: "null",
       recoveryText: "null",
       status: "New",
+      email: currentUserEmail
     };
 
     console.log(sweepObject);

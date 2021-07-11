@@ -18,11 +18,24 @@ export class ProductListComponent implements OnInit {
 
 
   getSweep (){
-    this.service.getSweeps().subscribe(d=>{
-      this.data = d;
-      console.log(d);
-      
-    })
+    const isAdmin = sessionStorage.getItem('isAdmin');
+    if(isAdmin||isAdmin=='true')
+    {
+      this.service.getAllSweeps().subscribe(d=>{
+        this.data =d;
+      })
+    }
+
+    else{
+      const email = sessionStorage.getItem('email');
+      this.service.getSweeps(email).subscribe(d=>{
+        this.data = d;
+        console.log(d);
+
+      })
+
+    }
+
 
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { ApiServiceService } from '../api-service.service';
 import { Brand } from './brand';
@@ -11,14 +12,15 @@ import { Brand } from './brand';
 export class AddBrandComponent implements OnInit {
 brand = new Brand();
 constructor(private serice: ApiServiceService, private toastr: ToastrService) { }
-addBrand() {
+addBrand(form:NgForm) {
   if (!this.brand.title) {
 
 
   }
   else {
     this.serice.addBrand(this.brand).subscribe(d => {
-      this.toastr.success('Brand Added Sucessfully')
+      this.toastr.success('Brand Added Sucessfully');
+      form.reset();
     })
 
   }

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { OktaAuthService } from '../okta-auth.service';
 
+
 @Component({
   selector: 'app-admin-layout',
   templateUrl: './admin-layout.component.html',
@@ -38,16 +39,16 @@ this.getCurrentUserEmail()
     this.currentUserEmail = oktaStorage.idToken.claims.email;
 
     // alert(this.currentUserEmail)
-
+    sessionStorage.setItem('email',this.currentUserEmail);
     const domain = this.currentUserEmail.split('@').pop().split('.')[0]
 
     console.log(domain);
     if(domain.includes('baskcart'))
     {
-      alert('admin')
+      sessionStorage.setItem('isAdmin','true');
     }
     else{
-      alert('simple User')
+      sessionStorage.setItem('isAdmin','false');
     }
 
   }
