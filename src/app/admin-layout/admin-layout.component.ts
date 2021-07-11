@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { OktaAuthService } from '../okta-auth.service';
 
+
 @Component({
   selector: 'app-admin-layout',
   templateUrl: './admin-layout.component.html',
@@ -13,10 +14,11 @@ export class AdminLayoutComponent implements OnInit {
     private service: ApiServiceService,
     private router: Router,
     private oktaAuth: OktaAuthService
+
   ) { }
-
+  currentUserEmail:string;
   ngOnInit() {
-
+this.getCurrentUserEmail()
   }
 
   routeToAddSweep() {
@@ -29,6 +31,25 @@ export class AdminLayoutComponent implements OnInit {
 
   logoutToHome() {
     this.oktaAuth.logout();
+
+  }
+
+  getCurrentUserEmail(){
+    const oktaStorage = JSON.parse( localStorage.getItem('okta-token-storage'));
+    this.currentUserEmail = oktaStorage.idToken.claims.email;
+
+    // alert(this.currentUserEmail)
+    sessionStorage.setItem('email',this.currentUserEmail);
+    const domain = this.currentUserEmail.split('@').pop().split('.')[0]
+
+    console.log(domain);
+    if(domain.includes('baskcart'))
+    {
+      sessionStorage.setItem('isAdmin','true');
+    }
+    else{
+      sessionStorage.setItem('isAdmin','false');
+    }
 
   }
 
