@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
 
   getSweep (){
     const isAdmin = sessionStorage.getItem('isAdmin');
-    if(isAdmin||isAdmin=='true')
+    if(isAdmin!="undefined"&&isAdmin=='true')
     {
       this.service.getAllSweeps().subscribe(d=>{
         this.data =d;
