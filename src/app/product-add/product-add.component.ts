@@ -208,7 +208,7 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
 
     console.log(this.obj.brand);
     console.log(this.obj.product);
-    console.log(this.obj.store);
+     console.log(this.obj.store);
 
 
 
