@@ -4,6 +4,8 @@ phases:
   install:
     commands:
       - echo installing nodejs...
+      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+      - curl -sL https://deb.nodesource.com/setup_12.x | bash -
       - apt-get install -y nodejs  #aws code build use ubuntu environement
   pre_build:
     commands:
