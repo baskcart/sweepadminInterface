@@ -3,7 +3,6 @@ version: 0.1
 phases:
   install:
     commands:
- #     - docker system prune -y
       - echo installing nodejs...
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - curl -sL https://deb.nodesource.com/setup_12.x | bash -
