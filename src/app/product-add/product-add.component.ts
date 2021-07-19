@@ -22,12 +22,15 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
   brands = [];
   shops=[];
   products=[];
+  maxDate:Date;
 
   ngOnInit() {
     this.totalBudget();
-    // this.getBrandsFromApi();
-    // this.getProductsFromApi();
-    // this.getShopsFromApi();
+    this.maxDate = new Date();
+    this.maxDate.setDate(this.date.getDate()+7)
+
+
+
   }
   getShopsFromApi(query) {
     this.service.getShopAutoComplete(query).subscribe((d) => {
