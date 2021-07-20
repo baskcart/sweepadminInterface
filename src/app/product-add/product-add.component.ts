@@ -28,9 +28,6 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
     this.totalBudget();
     this.maxDate = new Date();
     this.maxDate.setDate(this.date.getDate()+7)
-
-
-
   }
   getShopsFromApi(query) {
     this.service.getShopAutoComplete(query).subscribe((d) => {
@@ -43,8 +40,8 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
         console.log(shop);
 
         let obj = {
-          id: id + 1,
-          name: shop,
+          id: shop.id,
+          name: shop.title,
         };
         this.shops.push(obj);
       });
@@ -80,8 +77,8 @@ export class ProductAddComponent implements OnInit, AfterViewInit {
         console.log(brand);
 
         let obj = {
-          id: id + 1,
-          name: brand,
+          id: brand.id,
+          name: brand.title,
         };
         this.brands.push(obj);
       });

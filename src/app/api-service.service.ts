@@ -18,9 +18,9 @@ export class ApiServiceService {
   private insertWinnerURL = environment.baseUrl + 'winner/add';
   private getWinnersDailyURL = environment.baseUrl + 'find/by?date=2020-12-20&type=daily';
   private getWinnerWeeklyURL = environment.baseUrl + 'find/by?date=2020-12-20&type=weekly';
-  private getBrandAutoCompleteURL = environment.baseUrl + "sweepproduct/stag/searchBrandByShopAndBrandPrefix";
+  private getBrandAutoCompleteURL = environment.baseUrl + "sweepproduct/stag/searchbybrand";
   private getProductAutoCompleteURL = environment.baseUrl + "sweepproduct/stag/searchProductByShopAndBrandAndProductPrefix";
-  private getShopAutoCompleteURL = environment.baseUrl + "sweepproduct/stag/searchShopByShopPrefix";
+  private getShopAutoCompleteURL = environment.baseUrl + "sweepproduct/stag/searchbyshop";
   private checkFundURL = environment.baseUrl + 'stellar/balance';
   private addBrandURL = environment.baseUrl + 'sweepproduct/brand';
   private addShopURL = environment.baseUrl + "sweepproduct/shops";
@@ -57,8 +57,8 @@ export class ApiServiceService {
   public getBrandAutoComplete(query, store): Observable<any> {
     return this.http.get(this.getBrandAutoCompleteURL, {
       params: {
-        brandPrefix: query,
-        shopPrefix: store
+        brandName: query,
+
       }
     });
   }
@@ -76,7 +76,7 @@ export class ApiServiceService {
   public getShopAutoComplete(query): Observable<any> {
     return this.http.get(this.getShopAutoCompleteURL, {
       params: {
-        shopPrefix: query
+        shopName : query
       }
     })
   }
