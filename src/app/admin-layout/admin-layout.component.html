@@ -159,7 +159,7 @@
                 <span class="menu-title">Shop</span>
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <i class="mdi mdi-circle-outline menu-icon"></i>
                 <span class="menu-title">Brand</span>
@@ -171,8 +171,22 @@
                   <li class="nav-item"> <a class="nav-link" style="cursor: pointer;" (click)="routeToSweepList()">Sweep List</a></li>
                 </ul>
               </div>
+            </li> -->
+
+            <li class="nav-item">
+              <a class="nav-link"  (click)="routeToAddSweep()"   >
+                <i class="mdi mdi-plus menu-icon"></i>
+                <span class="menu-title">Add Sweep</span>
+              </a>
             </li>
 
+
+            <li class="nav-item">
+              <a class="nav-link"  (click)="routeToSweepList()"   >
+                <i class="mdi mdi-eye menu-icon"></i>
+                <span class="menu-title">List Sweep</span>
+              </a>
+            </li>
             <!-- <li class="nav-item">
               <a  class="nav-link" [routerLink]="['/layout/add-product']" >
                 <i  class="mdi mdi-plus menu-icon"></i>
