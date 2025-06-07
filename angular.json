@@ -122,5 +122,8 @@
         }
       }
     }},
-  "defaultProject": "ArduinoProject"
+  "defaultProject": "ArduinoProject",
+  "cli": {
+    "analytics": false
+  }
 }
